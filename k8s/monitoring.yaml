@@ -11,6 +11,9 @@ data:
         static_configs:
           - targets: ['todo-app-service:80']
         metrics_path: /health
+      - job_name: 'node-exporter'
+        static_configs:
+          - targets: ['172.31.21.156:9100']
 ---
 apiVersion: apps/v1
 kind: Deployment
